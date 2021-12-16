@@ -1,5 +1,8 @@
 INFURA_URL = "https://mainnet.infura.io/v3/8805c48e3d764ab891186b1ed5eb1241"
 
+#public node polygon mainnet
+INFURA_URL = "https://matic-mainnet.chainstacklabs.com"
+
 MINERS = {
     "0x00192fb10df37c9fb26829eb2cc623cd1bf599e8":"2Miners: PPLNS",
     "0x002e08000acbbae2155fab7ac01929564949070d":"2Miners: SOLO",
