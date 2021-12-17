@@ -1,11 +1,15 @@
 import config, time, ccxt
 from flask import Flask, render_template, request, flash, redirect
 from web3 import Web3
+from web3.middleware import geth_poa_middleware
 
 app = Flask(__name__, template_folder="templates")
 app.config['SECRET_KEY'] = 'somerandomstring'
 
 w3 = Web3(Web3.HTTPProvider(config.INFURA_URL))
+
+#for polygon
+w3.middleware_onion.inject(geth_poa_middleware, layer=0)
 
 def get_ethereum_price():
     binance = ccxt.binance()
